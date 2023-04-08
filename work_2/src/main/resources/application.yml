@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: my-application   # 应用程序ID
+  profiles:
+    active: dev           # 激活的环境配置
+apollo:
+  bootstrap:
+    enabled: true         # 启用Apollo客户端自动配置
+    namespaces: application,dev   # 应用程序和环境配置的命名空间
+  meta:
+    http://localhost:8080   # Apollo配置中心地址
