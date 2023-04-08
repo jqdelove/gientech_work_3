@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: my-input-queue   # 输入队列的名称
+        output:
+          destination: my-output-queue  # 输出队列的名称
+      rabbit:
+        bindings:
+          input:
+            consumer:
+              binding-routing-key: my-input-queue   # 输入队列的路由键
+          output:
+            producer:
+              binding-routing-key: my-output-queue  # 输出队列的路由键
+      kafka:
+        binder:
+          brokers: localhost:9092   # Kafka集群的地址
+          defaultBrokerPort: 9092
+          configuration:
+            security:
+              protocol: PLAINTEXT   # Kafka集群的安全协议
