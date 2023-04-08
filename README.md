@@ -1,5 +1,6 @@
 # gientech_work_3
 分布式培训第三次作业
+
 1.通过 spring stream 访问 rabbit mq 与kafka
 
 题解见work_1
